@@ -72,46 +72,6 @@ class WithDb extends Connect
         $tableisBD->close();
     }//controlTable
     
-    protected function insertComment()
-    {
-        $today =date("Y-m-d");
-        $this->nameuser;//имя комментатора
-        $this->department;//имя раздела
-        $this->sectionin;//алиас статьи
-        $this->comment;//текст комментария
-        $this->groupuser;//группа комментатора
-        $this->numberuser;//ид комментатора из таблицы пользователей
-        $this->moder;//модерация, здесь всегда 0      
-        
-        /* 1. Если есть строки и если есть таблица  
-         * 2. Находим номер статьи в выборке статей
-         * 3. Если есть модерация и она равна 0, вводим данные в таблицу*/
-        $this->mysqli->query("SET NAMES 'utf8'");     
-            
-             //Подготавливаем запрос к БД prepare - вписываем имя раздела
-             $insertel=$this->mysqli->prepare(
-                   'INSERT INTO ' .$this->table . ' 
-                        (text, iduser, nameuser, groupuser, namearticle, division, dat, moder) 
-                        VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
-             $insertel->bind_param('sisisssi',$tx,$ius, $nmus, $grus, $nbar, $dvar, $dt, $mdr);
-             $tx =$this->comment;
-             $ius =$this->numberuser;
-             $nmus =$this->nameuser;
-             $grus =$this->groupuser;
-             $nbar =$this->idar;
-             $dvar =$this->divar;
-             $dt =$today;
-             $mdr =$this->moder;
-             //Выполняем запрос и узнаем id последней вставленной строки
-             if ($insertel->execute())
-             $ndel = $this->mysqli->insert_id;
-             printf($insertel->error);
-             //Закрываем запрос
-             $insertel->close();
-             if (isset($ndel))
-             return $ndel;
-             //header("Location:".$_SERVER['HTTP_REFERER']);
-    }//insertCommon
     
     /* Метод selectChapter
      * Таблица Главы. Выборка глав раздела.
@@ -309,86 +269,6 @@ class WithDb extends Connect
              $selcmn->close();
          } else return null;
     }//selectCommon
-    
-    /* Метод selectComments
-     * Выборка комментариев к указанной странице.
-     * 
-     * Аргументы: table="feedback".$this->division;
-     * Возвращает многомерный массив
-     * Ключи:
-     *        * 1)id порядковый номер комментария,
-              * text текст комментария,
-              * iduser id комментатора,
-              * fromuser имя комментатора,
-              * group группа комментатора,
-              * article алиас комментируемой статьи или наименование раздела для главной раздела,
-              * divis - имя раздела в котором находится статья на англ., 
-              * data дата публикации или измененияб
-              * moder - отметка модератора - 0 -НЕ публиковать, 1- опубликовать;
-              * 2) второй ключ - порядковый номер комментария
-     * Возвращает null, если выборка не была выполнена 
-     * */
-    protected function selectComments()
-    {
-        $this->table;
-        if ($this->table) 
-        if ($this->controlTable())  { 
-         if ($this->controlString() !== false) {
-         //Указываем кодировку вывода данных из СУБД
-         $this->mysqli->query("SET NAMES 'utf8'");
-         
-         //Подготавливаем запрос к БД prepare
-         $selcomms=$this->mysqli->prepare('SELECT 
-         id, 
-         text,
-         iduser,
-         nameuser,
-         groupuser,
-         namearticle,
-         division,
-         dat,
-         moder
-         FROM ' . $this->table . '
-         WHERE namearticle=? ORDER BY id');
-        
-         //Выполняем подготовленный запрос
-         if ($selcomms !== false) {
-			 $selcomms->bind_param('s', $dann); 
-			 $dann = $this->oper;
-             $selcomms->execute();
-         
-         //Привязка переменных к подготовленному запросу
-         $selcomms->bind_result(
-         $idcomms,
-         $textcomms,
-         $idusercomms,
-         $nameusercomms,
-         $groupcomms,
-         $articlecomms,
-         $divcomms,
-         $dtcomms,
-         $mdrcomms);
-         //результат запроса помещаем в цикл  while и создаем рабочий массив
-         while($selcomms->fetch()) {
-            $textcomments["id"][$idcomms] = $idcomms; 
-            $textcomments["text"][$idcomms] = $textcomms;
-            $textcomments["iduser"][$idcomms] = $idusercomms;
-            $textcomments["fromuser"][$idcomms] = $nameusercomms;
-            $textcomments["group"][$idcomms] = $groupcomms;
-            $textcomments["article"][$idcomms] = $articlecomms;
-            $textcomments["divis"][$idcomms] = $divcomms;
-            $textcomments["data"][$idcomms] = $dtcomms;
-            $textcomments["moder"][$idcomms] = $mdrcomms;            
-            } 
-            } //var_dump($textcomments);
-             if (isset($textcomments)) return $textcomments;
-             else return null;
-             //printf($selcomms->error);
-             //Закрываем запрос
-             $selcomms->close();
-         } else return null;
-	 }
-    }//selectComments
     
     
     /*Метод selectMainForNav
