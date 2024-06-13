@@ -94,8 +94,8 @@ content="default-src 'self';style-src 'self' 'unsafe-inline'; script-src 'self' 
 			<span id="address" itemprop = "author" itemscope 
               itemtype = "https://schema.org/Person"><!---row 5-6 column 2-3 в main -->
 			  <address itemprop="name"><picture>
-                    <source srcset="/images/stylo2-24.svg">
-                    <img src="/images/stylo2-24.png">                    
+                    <source srcset="/images/stylo.svg">
+                    <img src="/images/stylo.png">                    
                 </picture><?php $control->viewAuthor(); ?></address>
 			</span><!--end span-->
 			<!--Дата публикации Входит в обработчик -->
