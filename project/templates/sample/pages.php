@@ -23,8 +23,8 @@ content="default-src 'self';style-src 'self' 'unsafe-inline'; script-src 'self' 
 			
 			<div id="logo"><!--column in domen 2-3 row 1-2-->
                 <picture>
-                    <source srcset="/images/logo-green-120.svg">
-                    <img src="/images/green-120.png">                    
+                    <source srcset="/images/logo.svg">
+                    <img src="/images/logo.png">                    
                 </picture>            
             </div><!--logo-->
             
