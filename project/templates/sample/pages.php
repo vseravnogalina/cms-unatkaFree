@@ -28,7 +28,7 @@ content="default-src 'self';style-src 'self' 'unsafe-inline'; script-src 'self' 
                 </picture>            
             </div><!--logo-->
             
-           <div class="name"><a href="<?php echo $control->viewDomain(); ?>"><h1>Unatka.ru</h1></a></div><!--column in domen 3-4 row 1-2-->
+           <div class="name"><a href="<?php echo $control->viewDomain(); ?>"><h1>Домен сайта</h1></a></div><!--column in domen 3-4 row 1-2-->
             
             <div class="about"><!--column in domen 4-5 row 1-2-ссылка на контакты-->
            <a class="second-button js-secondButton" href=""></a>
