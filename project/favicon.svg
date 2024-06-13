@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="120"
+   height="120"
+   viewBox="0 0 112.5 112.49999"
+   id="svg4814"
+   version="1.1"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="logo-green-120.svg">
+  <title
+     id="title819">Логотип сайта unatka.ru</title>
+  <defs
+     id="defs4816" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="6.2166668"
+     inkscape:cx="59.999998"
+     inkscape:cy="60"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1213"
+     inkscape:window-height="969"
+     inkscape:window-x="67"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     units="px" />
+  <metadata
+     id="metadata4819">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Логотип сайта unatka.ru</dc:title>
+        <dc:date>15.10.20</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Родионова Галина Евгеньевна</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:source>unatka.ru</dc:source>
+        <dc:language>русский</dc:language>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>unatka.ru</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>Логотип сайта unatka.ru</dc:description>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>нет</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-494.74003,-798.71457)">
+    <g
+       id="g830"
+       transform="matrix(1.6626583,0,0,1.6974429,-327.84362,-635.52011)">
+      <ellipse
+         ry="33.138081"
+         rx="33.831364"
+         cy="878.07648"
+         cx="528.57141"
+         id="path3464-5-9"
+         style="opacity:0.98999999;fill:#003333;fill-opacity:1;stroke:none;stroke-width:1.99968743;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         transform="scale(0.97433286,1.0263433)"
+         id="text3466-3-2"
+         y="877.44745"
+         x="519.9068"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#cc9900;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="877.44745"
+           x="519.9068"
+           id="tspan3468-5-0"
+           sodipodi:role="line"
+           style="font-size:60px;line-height:1.25;fill:#cc9900;fill-opacity:1">U</tspan></text>
+    </g>
+  </g>
+</svg>
