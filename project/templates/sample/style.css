@@ -229,7 +229,7 @@ h1, h2, h3, h4, summary {
   color: #003333; }
 
 .anchor {
-  list-style-image: url(/images/anchor-24.svg); }
+  list-style-image: url(/images/anchor.svg); }
 
 .nav ul, #menu ul {
   list-style: none; }
