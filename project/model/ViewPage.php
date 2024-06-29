@@ -173,7 +173,7 @@ class ViewPage extends WithElements
 		    } else echo "Имя автора отсутствует";			    
 	}//viewAuthor
 	
-	/* Метод ();
+	/* Метод viewTime();
 	 * Отображение даты публикации статьи в шаблоне вида.
 	 * *Для CSS : article, article h1, article header, article div, article span,
 	 * article span address, article time;
@@ -345,6 +345,7 @@ class ViewPage extends WithElements
 					    " .$mnpg['text']['site'] ."</p></li>";
 				        }
 					}
+			echo "</ul>";
 		 }    			
 	}//viewSimpleMenu
 
