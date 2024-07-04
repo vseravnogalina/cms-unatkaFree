@@ -407,8 +407,13 @@ class ViewPage extends WithElements
 			 echo "<ul>";
 
 				    if(isset($menusimple)) {
-				    if (isset($this->division))
+				    if (!isset($this->alias)) {
 				    echo "Раздел: " . $textlink[$this->division];
+				    } else { 
+						echo "Раздел: <a href='/".$this->division."'>" . $textlink[$this->division] . "</a>";
+						}    
+				    /*if (isset($this->division))
+				    echo "Раздел: " . $textlink[$this->division];*/
                      foreach($menusimple as $k => $v){ 
 					 //$k - chapter $v - array	 
                      echo '<li class="js-menuForPart">';
